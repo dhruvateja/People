@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">People</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_recent_label">Recent</string>
+    <string name="section_favourite_label">Favourite</string>
+    <string name="title_activity_user">User</string>
+    <string name="user_p_call_text">Call</string>
+    <string name="message_text_header">Send something</string>
+    <string name="title_activity_tcards">Tcards</string>
+
+</resources>

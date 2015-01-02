@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_blue">#4897e4</color>
+    <color name="home_bg">#dddddd</color>
+    <color name="top_bar_bg">#4897e4</color>
+    <color name="custom_action_bar_bg">#ffffff</color>
+    <color name="logo_color">#ffffff</color>
+    <color name="white">#ffffff</color>
+
+    <color name="section_heading_text">#555555</color>
+    <color name="divider_color">#cccccc</color>
+
+
+    <color name="list_card_user_name">#333333</color>
+    <color name="list_card_user_status">#777777</color>
+    <color name="list_card_bg">#ffffff</color>
+
+
+    <color name="user_info_card_bg">#ffffff</color>
+    <color name="user_p_name">#333333</color>
+    <color name="user_p_status">#777777</color>
+    <color name="user_p_call_bg">#4CAF50</color>
+    <color name="user_p_call_text">#ffffff</color>
+    <color name="circle_btn_bg">#dedede</color>
+
+    <color name="message_text_color">#333333</color>
+    <color name="message_text_header">#777777</color>
+</resources>

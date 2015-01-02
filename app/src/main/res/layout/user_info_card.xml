@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/user_p_card"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_below="@id/top_bar"
+android:background="@color/user_info_card_bg">
+<LinearLayout
+    android:layout_width="56dp"
+    android:layout_height="56dp"
+    android:layout_alignParentLeft="true"
+    android:padding="16dp">
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_close_black_48dp"/>
+</LinearLayout>
+<RelativeLayout
+    android:id="@+id/user_p_image"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="8dp">
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/user"/>
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/user_p_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/user_p_image"
+    android:paddingTop="8dp"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_centerHorizontal="true">
+    <TextView
+        android:id="@+id/user_p_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name of the user"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/user_p_name"
+        android:textColor="@color/theme_blue"/>
+    <TextView
+        android:id="@+id/user_p_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_p_name"
+        android:text="In meeting can't answer any calls now. Leave a message."
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="4dp"
+        android:textSize="@dimen/user_p_status"
+        android:textColor="@color/user_p_status"/>
+    <TextView
+        android:id="@+id/user_p_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_p_status"
+        android:padding="4dp"
+        android:text="More Info"
+        android:textAllCaps="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/user_p_more_btn"
+        android:textColor="#777777"
+        android:textSize="12sp"
+        android:textStyle="bold"/>
+</RelativeLayout>
+<LinearLayout
+    android:layout_width="56dp"
+    android:layout_height="56dp"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:padding="16dp">
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_star_black_48dp"/>
+</LinearLayout>
+</RelativeLayout>

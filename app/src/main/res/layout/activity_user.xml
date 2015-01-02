@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg"
+    tools:context="com.people.User">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/theme_blue"
+        android:layout_alignParentTop="true">
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/user_p_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"
+        android:background="#ffffff">
+        <LinearLayout
+            android:id="@+id/user_p_history"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentLeft="true"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_history_black_48dp"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <LinearLayout
+                android:id="@+id/user_p_sms"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:padding="12dp"
+                android:background="@drawable/circle_btn">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_location_on_black_48dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/user_p_call"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/user_p_sms"
+                android:padding="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/circle_call_btn">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_phone_white_48dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/user_p_more_action"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/user_p_call"
+                android:padding="12dp"
+                android:background="@drawable/circle_btn">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_message_black_48dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_more_vert_black_48dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar"
+        android:layout_above="@id/user_p_actions">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/user_info_card"></include>
+            <include layout="@layout/message_card"></include>
+            <include layout="@layout/message_text_header"></include>
+            <include layout="@layout/message_text"></include>
+            <include layout="@layout/message_text"></include>
+            <include layout="@layout/message_text"></include>
+            <include layout="@layout/message_text"></include>
+            <include layout="@layout/message_text"></include>
+            <include layout="@layout/message_text"></include>
+            <include layout="@layout/message_text"></include>
+            <include layout="@layout/message_text"></include>
+            <include layout="@layout/message_text"></include>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

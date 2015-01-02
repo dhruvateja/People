@@ -1,0 +1,12 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="section_heading_text">18sp</dimen>
+    <dimen name="list_card_user_name">20sp</dimen>
+    <dimen name="user_p_name">24sp</dimen>
+    <dimen name="user_p_status">14sp</dimen>
+    <dimen name="user_p_call_text">16sp</dimen>
+    <dimen name="message_text_size">16sp</dimen>
+    <dimen name="message_text_header">18sp</dimen>
+</resources>
