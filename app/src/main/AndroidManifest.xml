@@ -24,6 +24,18 @@
             android:name=".Tcards"
             android:label="@string/title_activity_tcards" >
         </activity>
+        <activity
+            android:name=".Contacts"
+            android:label="@string/title_activity_contacts" >
+        </activity>
+        <activity
+            android:name=".Me"
+            android:label="@string/title_activity_me" >
+        </activity>
+        <activity
+            android:name=".dialer"
+            android:label="@string/title_activity_dialer" >
+        </activity>
     </application>
 
 </manifest>

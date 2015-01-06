@@ -10,5 +10,8 @@
     <string name="user_p_call_text">Call</string>
     <string name="message_text_header">Send something</string>
     <string name="title_activity_tcards">Tcards</string>
+    <string name="title_activity_contacts">Contacts</string>
+    <string name="title_activity_me">Me</string>
+    <string name="title_activity_dialer">dialer</string>
 
 </resources>

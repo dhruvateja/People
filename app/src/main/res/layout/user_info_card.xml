@@ -4,8 +4,8 @@
 android:id="@+id/user_p_card"
 android:layout_width="match_parent"
 android:layout_height="wrap_content"
-android:layout_below="@id/top_bar"
-android:background="@color/user_info_card_bg">
+android:background="@color/theme_blue"
+android:layout_marginBottom="8dp">
 <LinearLayout
     android:layout_width="56dp"
     android:layout_height="56dp"
@@ -46,41 +46,79 @@ android:background="@color/user_info_card_bg">
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:textSize="@dimen/user_p_name"
-        android:textColor="@color/theme_blue"/>
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/user_p_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_p_name"
+        android:text="9441204282"
+        android:textColor="@color/white"
+        android:textSize="@dimen/user_p_number"
+        android:gravity="center_horizontal"/>
     <TextView
         android:id="@+id/user_p_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/user_p_name"
+        android:layout_below="@id/user_p_number"
         android:text="In meeting can't answer any calls now. Leave a message."
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
         android:layout_marginBottom="4dp"
         android:textSize="@dimen/user_p_status"
-        android:textColor="@color/user_p_status"/>
-    <TextView
-        android:id="@+id/user_p_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/user_p_status"
-        android:padding="4dp"
-        android:text="More Info"
-        android:textAllCaps="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/user_p_more_btn"
-        android:textColor="#777777"
-        android:textSize="12sp"
-        android:textStyle="bold"/>
+        android:textColor="@color/white"/>
 </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_below="@id/user_p_info">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Info"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textAllCaps="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="History"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</RelativeLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:orientation="horizontal">
 <LinearLayout
     android:layout_width="56dp"
     android:layout_height="56dp"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentEnd="true"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:visibility="visible">
     <ImageView
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:src="@drawable/ic_star_black_48dp"/>
+</LinearLayout>
+<LinearLayout
+    android:layout_width="56dp"
+    android:layout_height="56dp"
+    android:padding="16dp">
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_more_vert_black_48dp"/>
+</LinearLayout>
 </LinearLayout>
 </RelativeLayout>

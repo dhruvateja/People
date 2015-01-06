@@ -7,12 +7,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
 public class Home extends Activity {
     private LinearLayout list_card_layout;
     private TextView logo_text;
+    private LinearLayout btn_contacts;
+    private LinearLayout btn_me;
+    private RelativeLayout dialer_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,33 @@ public class Home extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Home.this, Tcards.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_contacts = (LinearLayout)findViewById(R.id.contacts_link);
+        btn_contacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Home.this, Contacts.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_me = (LinearLayout)findViewById(R.id.me_link);
+        btn_me.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Home.this, Me.class);
+                startActivity(intent);
+            }
+        });
+
+        dialer_btn = (RelativeLayout)findViewById(R.id.home_dialer);
+        dialer_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Home.this, dialer.class);
                 startActivity(intent);
             }
         });
