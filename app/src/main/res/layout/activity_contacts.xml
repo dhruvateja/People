@@ -5,7 +5,7 @@
     android:background="@color/home_bg"
     tools:context="com.people.Contacts">
 
-    <RelativeLayout
+   <!-- <RelativeLayout
         android:id="@+id/custom_action_bar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -43,13 +43,13 @@
                 android:layout_height="24dp"
                 android:src="@drawable/ic_mood_white_48dp"/>
         </LinearLayout>
-    </RelativeLayout>
+    </RelativeLayout>-->
 
     <RelativeLayout
         android:id="@+id/contacts_search_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/custom_action_bar">
+      >
         <EditText
             android:layout_width="match_parent"
             android:layout_height="48dp"
