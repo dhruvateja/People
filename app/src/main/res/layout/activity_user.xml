@@ -16,17 +16,210 @@
             android:orientation="vertical">
 
             <include layout="@layout/user_info_card"></include>
-            <include layout="@layout/note_temp"></include>
-            <include layout="@layout/message_text_header"></include>
-            <include layout="@layout/message_text"></include>
-            <include layout="@layout/message_text"></include>
-            <include layout="@layout/message_text"></include>
-            <include layout="@layout/message_text"></include>
-            <include layout="@layout/message_text"></include>
-            <include layout="@layout/message_text"></include>
-            <include layout="@layout/message_text"></include>
-            <include layout="@layout/message_text"></include>
-            <include layout="@layout/message_text"></include>
+
+            <LinearLayout
+                style="@style/display_message">
+
+                <!--location card-->
+                <LinearLayout
+                    style="@style/location_card"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="#555555">
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:layout_weight="1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/blue_btn"
+                            android:text="location name"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/c5"
+                            android:textSize="14sp"
+                            android:text="house no 12, road number 2, banjarahills, Hyderabad - 500034"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--location card-->
+
+
+                <!--message card-->
+                <TextView
+                    android:id="@+id/note_card_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Where are you ?"
+                    android:textColor="@color/note_card_note"
+                    android:visibility="gone"
+                    android:textSize="@dimen/note_card_note"/>
+                <!--message card-->
+
+                <!--call card-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:background="@color/white">
+                    <LinearLayout
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:background="@drawable/circle_btn"
+                        android:layout_marginRight="16dp">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_call_missed_grey600_48dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="4dp">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="You missed a call"
+                                android:textSize="16sp"
+                                android:textColor="@color/c3"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+91 9441204282"
+                            android:textSize="14sp"
+                            android:textColor="@color/c5"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--call card-->
+
+                <LinearLayout
+                    style="@style/divider"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="12 min ago"
+                        android:textColor="@color/c7"/>
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_done_all_grey600_48dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/mt1"
+                style="@style/message_template">
+                <TextView
+                    style="@style/message_template_text"
+                    android:text="Send Your location"
+                    android:layout_gravity="center"/>
+                <LinearLayout style="@style/message_template_divider"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/message_template">
+                <TextView
+                    style="@style/message_template_text"
+                    android:text="I'll be there in ..."
+                    android:layout_gravity="center"/>
+                <LinearLayout style="@style/message_template_divider"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/message_template">
+                <TextView
+                    style="@style/message_template_text"
+                    android:text="send weather"
+                    android:layout_gravity="center"/>
+                <LinearLayout style="@style/message_template_divider"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/message_template">
+                <TextView
+                    style="@style/message_template_text"
+                    android:text="I am running late"
+                    android:layout_gravity="center"/>
+                <LinearLayout style="@style/message_template_divider"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/message_template">
+                <TextView
+                    style="@style/message_template_text"
+                    android:text="Where are you"
+                    android:layout_gravity="center"/>
+                <LinearLayout style="@style/message_template_divider"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/message_template">
+                <TextView
+                    style="@style/message_template_text"
+                    android:text="Is this a good time to call"
+                    android:layout_gravity="center"/>
+                <LinearLayout style="@style/message_template_divider"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/message_template">
+                <TextView
+                    style="@style/message_template_text"
+                    android:text="Lets meet..."
+                    android:layout_gravity="center"/>
+                <LinearLayout style="@style/message_template_divider"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/message_template">
+                <TextView
+                    style="@style/message_template_text"
+                    android:text="Reached safely..."
+                    android:layout_gravity="center"/>
+                <LinearLayout style="@style/message_template_divider"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/message_template">
+                <TextView
+                    style="@style/message_template_text"
+                    android:text="Custom Message..."
+                    android:layout_gravity="center"/>
+                <LinearLayout style="@style/message_template_divider"></LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

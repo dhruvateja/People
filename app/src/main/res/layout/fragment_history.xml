@@ -1,0 +1,77 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_bg"
+        android:orientation="vertical"
+        tools:context="com.people.History">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+            <TextView
+                android:layout_weight="1"
+                style="@style/section_heading_text"
+                android:text="Today"/>
+            <TextView
+                style="@style/section_heading_sub"
+                android:text="23/01/2015"/>
+        </LinearLayout>
+
+        <include layout="@layout/history_card"></include>
+        <include layout="@layout/history_card"></include>
+        <include layout="@layout/history_card"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+            <TextView
+                android:layout_weight="1"
+                style="@style/section_heading_text"
+                android:text="Yesterday"/>
+            <TextView
+                style="@style/section_heading_sub"
+                android:text="22/01/2015"/>
+        </LinearLayout>
+
+        <include layout="@layout/history_card"></include>
+        <include layout="@layout/history_card"></include>
+        <include layout="@layout/history_card"></include>
+        <include layout="@layout/history_card"></include>
+        <include layout="@layout/history_card"></include>
+        <include layout="@layout/history_card"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+            <TextView
+                android:layout_weight="1"
+                style="@style/section_heading_text"
+                android:text="Wednesday"/>
+            <TextView
+                style="@style/section_heading_sub"
+                android:text="21/01/2015"/>
+        </LinearLayout>
+
+        <include layout="@layout/history_card"></include>
+        <include layout="@layout/history_card"></include>
+        <include layout="@layout/history_card"></include>
+        <include layout="@layout/history_card"></include>
+        <include layout="@layout/history_card"></include>
+        <include layout="@layout/history_card"></include>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
