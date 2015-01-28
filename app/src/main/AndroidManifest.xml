@@ -36,6 +36,18 @@
             android:name=".dialer"
             android:label="@string/title_activity_dialer" >
         </activity>
+        <activity
+            android:name=".UserHistory"
+            android:label="@string/title_activity_user_history" >
+        </activity>
+        <activity
+            android:name=".Location"
+            android:label="@string/title_activity_location" >
+        </activity>
+        <activity
+            android:name=".Create"
+            android:label="@string/title_activity_create" >
+        </activity>
     </application>
 
 </manifest>

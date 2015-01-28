@@ -22,12 +22,14 @@ public class Home extends Fragment {
     private LinearLayout btn_contacts;
     private LinearLayout btn_me;
     private RelativeLayout dialer_btn;
+    private LinearLayout home_search_link;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.activity_home,container,false);
         list_card_layout = (LinearLayout)rootView.findViewById(R.id.list_card_id);
         dialer_btn = (RelativeLayout)rootView.findViewById(R.id.home_dialer);
+        home_search_link = (LinearLayout)rootView.findViewById(R.id.home_search_bar);
         return rootView;
     }
 
@@ -45,6 +47,13 @@ public class Home extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), dialer.class);
+                startActivity(intent);
+            }
+        });
+        home_search_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Contacts.class);
                 startActivity(intent);
             }
         });

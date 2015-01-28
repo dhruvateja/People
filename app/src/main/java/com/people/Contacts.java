@@ -11,12 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class Contacts extends Fragment {
+public class Contacts extends Activity {
 
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.activity_contacts,container,false);
-        return rootView;
-
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_contacts);
     }
 }
