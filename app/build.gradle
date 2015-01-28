@@ -19,7 +19,7 @@ android {
     }
     productFlavors {
          demo {
-             applicationId "com.dhruva.people"
+             applicationId "com.beta.people"
          }
         /*demo {
             packageName "com.dhruva.svaad"
