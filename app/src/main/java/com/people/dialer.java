@@ -2,10 +2,13 @@ package com.people;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.provider.CallLog;
+import android.provider.ContactsContract;
 import android.text.Html;
 import android.text.TextUtils;
 import android.util.Log;
@@ -50,6 +53,8 @@ public class dialer extends Activity implements AdapterView.OnItemClickListener{
 
         searchService = SearchService.getInstance(this);
         search(null);
+
+
     }
 
 
@@ -126,8 +131,7 @@ public class dialer extends Activity implements AdapterView.OnItemClickListener{
             private long start = System.currentTimeMillis();
 
             @Override
-            public void onSearchResult(String query, long hits,
-                                       final List<Map<String, Object>> result) {
+            public void onSearchResult(String query, long hits,final List<Map<String, Object>> result) {
                 mainHandler.post(new Runnable() {
                     @Override
                     public void run() {
