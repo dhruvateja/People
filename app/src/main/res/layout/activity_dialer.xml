@@ -4,7 +4,12 @@
     android:layout_height="match_parent"
     android:background="@color/home_bg"
     tools:context="com.people.dialer">
+<ListView
+    android:id="@+id/search_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
+    </ListView>
     <RelativeLayout
         android:id="@+id/dialbar"
         android:layout_width="match_parent"
