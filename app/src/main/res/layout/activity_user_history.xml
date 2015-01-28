@@ -1,0 +1,386 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg"
+    android:orientation="vertical"
+    tools:context="com.people.UserHistory">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/theme_blue">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+            <ImageView
+                android:id="@+id/contacts_img"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_back_white_48dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+            <TextView
+                style="@style/user_name"
+                android:text="Name of the user"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_phone_white_48dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_more_vert_black_48dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+                <TextView
+                    android:layout_weight="1"
+                    style="@style/section_heading_text"
+                    android:text="Today"/>
+                <TextView
+                    style="@style/section_heading_sub"
+                    android:text="24/01/2015"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_btn"
+                    android:layout_marginRight="16dp">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_call_received_grey600_48dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="4dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="You received a call"
+                            android:textSize="16sp"
+                            android:textColor="@color/c3"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12 min ago"
+                            android:textSize="12sp"
+                            android:textColor="@color/c7"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+91 9441204282 (11:12)"
+                        android:textSize="14sp"
+                        android:textColor="@color/c5"/>
+                </LinearLayout>
+            </LinearLayout><!--received call-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:padding="16dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_btn"
+                    android:layout_marginRight="16dp">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_call_missed_grey600_48dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="4dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="You missed a call"
+                            android:textSize="16sp"
+                            android:textColor="@color/c3"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12 min ago"
+                            android:textSize="12sp"
+                            android:textColor="@color/c7"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+91 9441204282"
+                        android:textSize="14sp"
+                        android:textColor="@color/c5"/>
+                </LinearLayout>
+            </LinearLayout><!--missed call-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_btn"
+                    android:layout_marginRight="16dp">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_call_made_grey600_48dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="4dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="You made a call"
+                            android:textSize="16sp"
+                            android:textColor="@color/c3"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12 min ago"
+                            android:textSize="12sp"
+                            android:textColor="@color/c7"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+91 9441204282 (1:12)"
+                        android:textSize="14sp"
+                        android:textColor="@color/c5"/>
+                </LinearLayout>
+            </LinearLayout><!--made a call-->
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+                <TextView
+                    android:layout_weight="1"
+                    style="@style/section_heading_text"
+                    android:text="Yesterday"/>
+                <TextView
+                    style="@style/section_heading_sub"
+                    android:text="23/01/2015"/>
+            </LinearLayout><!--section header-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_btn"
+                    android:layout_marginRight="16dp">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_message_grey600_48dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="4dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="You sent a message"
+                            android:textSize="16sp"
+                            android:textColor="@color/c3"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12 min ago"
+                            android:textSize="12sp"
+                            android:textColor="@color/c7"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lorem"
+                        android:textSize="14sp"
+                        android:textColor="@color/c5"/>
+
+                </LinearLayout>
+            </LinearLayout><!--message-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <LinearLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:background="@drawable/circle_btn"
+                    android:layout_marginRight="16dp">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_location_on_grey600_48dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="You received a location"
+                            android:textSize="16sp"
+                            android:textColor="@color/c3"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="12 min ago"
+                            android:textSize="12sp"
+                            android:textColor="@color/c7"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/location_card">
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:background="#555555">
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="4dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/blue_btn"
+                                android:text="location name"
+                                android:textStyle="bold"
+                                android:textSize="16sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/c5"
+                                android:textSize="14sp"
+                                android:text="house no 12, road number 2, banjarahills, Hyderabad - 500034"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout><!--location-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

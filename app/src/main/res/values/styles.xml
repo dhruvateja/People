@@ -5,6 +5,116 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="home_search_bar">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:background">@drawable/rounded_rectangle</item>
+    </style>
 
-    //bfb
+    <style name="section_heading_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/c5</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="section_heading_sub">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/c7</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="view_all_dark">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:background">@color/c7</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="user_name">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/c3</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:singleLine">true</item>
+
+    </style>
+
+    <style name="user_status">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/c7</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="history_card_time">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/c7</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+
+    <style name="location_card">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:background">@color/loc_card_bg</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="message_template">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="message_template_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/c5</item>
+    </style>
+    
+    <style name="message_template_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/divider_color</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/divider_color</item>
+    </style>
+
+    <style name="display_message">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/rounded_rectangle</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+
+    </style>
 </resources>

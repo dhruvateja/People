@@ -25,13 +25,13 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
         Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = Fragment.instantiate(context, Contacts.class.getName());
+                fragment = Fragment.instantiate(context, Me.class.getName());
                 break;
             case 1:
                 fragment = Fragment.instantiate(context, Home.class.getName());
                 break;
             case 2:
-                fragment = Fragment.instantiate(context, Me.class.getName());
+                fragment = Fragment.instantiate(context, History.class.getName());
 
                 break;
         }

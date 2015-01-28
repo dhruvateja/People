@@ -5,14 +5,6 @@
     android:background="@color/home_bg"
     tools:context="com.people.dialer">
 
-    <ListView
-        android:id="@+id/contacts_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </ListView>
-
-
     <RelativeLayout
         android:id="@+id/dialbar"
         android:layout_width="match_parent"
@@ -20,8 +12,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/theme_blue"
         android:paddingBottom="16dp"
-        android:paddingTop="16dp"
-        android:visibility="visible">
+        android:paddingTop="16dp">
 
         <LinearLayout
             android:id="@+id/contacts_link"
@@ -69,15 +60,12 @@
                 android:background="@color/white"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/num_editTxt"
+                <EditText
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/white"
-                    android:cursorVisible="true"
-                    android:textCursorDrawable="@android:color/black"
-
+                    android:cursorVisible="false"
                     android:gravity="center"
                     android:maxLines="1"
                     android:paddingLeft="8dp"
@@ -87,14 +75,11 @@
                     android:textSize="40sp" />
 
                 <LinearLayout
-                    android:id="@+id/delete_btn"
-                    android:onClick="onBtnClick"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
                     android:padding="16dp">
 
                     <ImageView
-
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:src="@drawable/ic_backspace_black_48dp" />
@@ -111,8 +96,6 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:onClick="onBtnClick"
-                    android:tag="1(vm)"
                     android:orientation="horizontal">
 
                     <TextView
@@ -128,14 +111,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="vm"
-                        android:visibility="visible"
                         android:textColor="@color/white"
                         android:textSize="@dimen/dialpad_letter" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:onClick="onBtnClick"
-                    android:tag="2(abc)"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -160,11 +140,9 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:onClick="onBtnClick"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:tag="3(def)"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal">
 
@@ -187,15 +165,11 @@
             </LinearLayout>
 
             <LinearLayout
-
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:onClick="onBtnClick"
-                    android:tag="4(ghi)"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -220,8 +194,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:onClick="onBtnClick"
-                    android:tag="5(jkl)"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -246,8 +218,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:onClick="onBtnClick"
-                    android:tag="6(mno)"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -273,14 +243,11 @@
             </LinearLayout>
 
             <LinearLayout
-
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:onClick="onBtnClick"
-                    android:tag="7(pqrs)"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -305,8 +272,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:onClick="onBtnClick"
-                    android:tag="8(tuv)"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -331,8 +296,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:onClick="onBtnClick"
-                    android:tag="9(wxyz)"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -363,8 +326,6 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:onClick="onBtnClick"
-                    android:tag="*"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -382,8 +343,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:onClick="onBtnClick"
-                    android:tag="0"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -408,8 +367,6 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:onClick="onBtnClick"
-                    android:tag="#"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
