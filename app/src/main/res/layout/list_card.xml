@@ -23,12 +23,14 @@
             android:layout_weight="1"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/contact_nameTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name of the user"
                 android:textColor="@color/list_card_user_name"
                 android:textSize="@dimen/list_card_user_name"/>
             <TextView
+                android:id="@+id/contact_numTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="is now very busy"
@@ -39,6 +41,7 @@
             android:layout_height="40dp"
             android:padding="8dp">
             <ImageView
+                android:id="@+id/dial_btn"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_phone_grey600_48dp"/>
