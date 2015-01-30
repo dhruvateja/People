@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.people" >
+    package="com.people">
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:name=".Location"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,36 +18,51 @@
         </activity>
         <activity
             android:name=".User"
-            android:label="@string/title_activity_user" >
-        </activity>
+            android:label="@string/title_activity_user"></activity>
         <activity
             android:name=".Tcards"
-            android:label="@string/title_activity_tcards" >
-        </activity>
-        <activity
-            android:name=".Contacts"
-            android:label="@string/title_activity_contacts" >
-        </activity>
-        <activity
-            android:name=".Me"
-            android:label="@string/title_activity_me" >
-        </activity>
+            android:label="@string/title_activity_tcards"></activity>
+        <!-- <activity
+             android:name=".Contacts"
+             android:label="@string/title_activity_contacts" >
+         </activity>-->
+
         <activity
             android:name=".dialer"
-            android:label="@string/title_activity_dialer" >
-        </activity>
+            android:label="@string/title_activity_dialer"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
         <activity
             android:name=".UserHistory"
-            android:label="@string/title_activity_user_history" >
-        </activity>
-        <activity
+            android:label="@string/title_activity_user_history"></activity>
+       <!-- <activity
             android:name=".Location"
-            android:label="@string/title_activity_location" >
-        </activity>
+            android:label="@string/title_activity_location"></activity>-->
+        <!-- Goolge API Key -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/map_api_key" />
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
         <activity
             android:name=".Create"
-            android:label="@string/title_activity_create" >
-        </activity>
+            android:label="@string/title_activity_create"></activity>
     </application>
+    <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <permission
+        android:name="com.people.googlemapsv2.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <uses-permission android:name="com.people.googlemapsv2.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>

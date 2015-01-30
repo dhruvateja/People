@@ -65,7 +65,8 @@
                 android:background="@color/white"
                 android:orientation="horizontal">
 
-                <EditText
+                <TextView
+                    android:id="@+id/text_field"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -80,6 +81,8 @@
                     android:textSize="40sp" />
 
                 <LinearLayout
+                    android:onClick="onBtnClick"
+                    android:id="@+id/delete_layout"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
                     android:padding="16dp">
@@ -97,6 +100,8 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:onClick="onBtnClick"
+                    android:tag="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -121,6 +126,8 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:onClick="onBtnClick"
+                    android:tag="2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -145,6 +152,8 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:onClick="onBtnClick"
+                    android:tag="3"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -175,6 +184,8 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:onClick="onBtnClick"
+                    android:tag="4"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -199,6 +210,8 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:onClick="onBtnClick"
+                    android:tag="5"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -223,6 +236,8 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:onClick="onBtnClick"
+                    android:tag="6"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -253,6 +268,8 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:onClick="onBtnClick"
+                    android:tag="7"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -277,6 +294,8 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:onClick="onBtnClick"
+                    android:tag="8"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -301,6 +320,8 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:onClick="onBtnClick"
+                    android:tag="9"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -331,6 +352,8 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:onClick="onBtnClick"
+                    android:tag="*"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -348,6 +371,8 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:onClick="onBtnClick"
+                    android:tag="0"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -372,6 +397,8 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:onClick="onBtnClick"
+                    android:tag="#"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

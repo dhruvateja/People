@@ -21,13 +21,16 @@
             android:layout_weight="1"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/contact_name"
                 style="@style/user_name"
                 android:text="Name of the user"/>
             <TextView
+                android:id="@+id/contact_num"
                 style="@style/user_status"
                 android:text="is now very busy"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/dial_layout"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:padding="8dp">

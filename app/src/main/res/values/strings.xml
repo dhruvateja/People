@@ -19,5 +19,10 @@
     <string name="title_activity_user_history">User_history</string>
     <string name="title_activity_location">Location</string>
     <string name="title_activity_create">Create</string>
+    <string name="map_api_key">AIzaSyCmObAW5otl6UMzIAUA4DOTSwF3G2JxGOM</string>
+    <string name="locations_service_missing_txt">We need access to location services on your device to use this feature.</string>
+    <string name="google_play_services_missing_txt">We need access to Google play services on your device to use this feature.</string>
+    <string name="fourthsqaure_id">35LKG0MYJ3QDABBSBOL4UDD3IXBPNJO41ZN0VWMX4D0DGM4D</string>
+    <string name="fourthsquare_secert_id">ZUCHLWSGT1LHUYPBMZLVHIUNNIUJKM2PLEKZDRAQ2KDZLVCV</string>
 
 </resources>

@@ -8,25 +8,31 @@
     <RelativeLayout
         android:id="@+id/map_area"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="#cccccc">
+        android:layout_height="250dp">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
         <LinearLayout
             android:id="@+id/send_my_loc"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:orientation="horizontal"
             android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
             android:background="@drawable/send_loc_btn"
             android:gravity="center"
-            android:layout_margin="16dp">
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Send Current Location"
+                android:textAllCaps="true"
                 android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textAllCaps="true"/>
+                android:textSize="16sp" />
         </LinearLayout>
 
     </RelativeLayout>
@@ -36,13 +42,16 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentTop="true"
-        android:orientation="horizontal"
-        android:background="@android:color/transparent">
+        android:background="@android:color/transparent"
+        android:orientation="horizontal">
+
         <LinearLayout
+            android:id="@+id/close_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:layout_alignParentLeft="true">
+            android:layout_alignParentLeft="true"
+            android:padding="16dp">
+
             <ImageView
                 android:id="@+id/contacts_img"
                 android:layout_width="24dp"
@@ -53,155 +62,189 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_alignParentRight="true">
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
             <LinearLayout
                 android:id="@+id/map_reload"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:visibility="gone">
+
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_refresh_black_48dp"/>
+                    android:src="@drawable/ic_refresh_black_48dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/map_full_screen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:visibility="visible">
+
                 <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_fullscreen_black_48dp"/>
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_fullscreen_black_48dp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/user_current_loc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:visibility="invisible">
+
                 <ImageView
                     android:layout_width="24dp"
                     android:layout_height="24dp"
-                    android:src="@drawable/ic_my_location_black_48dp"/>
+                    android:src="@drawable/ic_my_location_black_48dp" />
             </LinearLayout>
 
         </LinearLayout>
 
     </RelativeLayout>
 
-    <ScrollView
-        android:id="@+id/sv"
+
+    <LinearLayout
+        android:id="@+id/nearby_places"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/map_area">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/map_area"
+        android:orientation="vertical">
+
         <LinearLayout
-            android:id="@+id/nearby_places"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:weightSum="2">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
+                android:layout_weight="2"
                 android:orientation="vertical">
+
                 <TextView
                     style="@style/section_heading_text"
-                    android:text="Nearby Places"/>
+                    android:text="Nearby Places" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="search results from google maps"
-                    android:textColor="@color/c7"/>
+                    android:textColor="@color/c7" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginBottom="1dp"
-                android:background="@color/white">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Name of the place"
-                    android:textColor="@color/c5"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="house no : 2, Road number 12, Banjara Hills, Hyderabad - 500034"
-                    android:textColor="@color/c7"/>
-            </LinearLayout>
+                android:layout_weight="0">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginBottom="1dp"
-                android:background="@color/white">
-                <TextView
+                <ProgressBar
+                    android:visibility="gone"
+                    android:id="@+id/progress_bar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Name of the place"
-                    android:textColor="@color/c5"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="house no : 2, Road number 12, Banjara Hills, Hyderabad - 500034"
-                    android:textColor="@color/c7"/>
+                    android:layout_gravity="right" />
             </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginBottom="1dp"
-                android:background="@color/white">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Name of the place"
-                    android:textColor="@color/c5"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="house no : 2, Road number 12, Banjara Hills, Hyderabad - 500034"
-                    android:textColor="@color/c7"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp"
-                android:layout_marginBottom="1dp"
-                android:background="@color/white">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Name of the place"
-                    android:textColor="@color/c5"
-                    android:textSize="16sp"
-                    android:textStyle="bold"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="house no : 2, Road number 12, Banjara Hills, Hyderabad - 500034"
-                    android:textColor="@color/c7"/>
-            </LinearLayout>
-
         </LinearLayout>
-    </ScrollView>
+
+        <ListView
+            android:id="@+id/loc_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"></ListView>
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:padding="16dp"
+             android:layout_marginBottom="1dp"
+             android:background="@color/white">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Name of the place"
+                 android:textColor="@color/c5"
+                 android:textSize="16sp"
+                 android:textStyle="bold"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="house no : 2, Road number 12, Banjara Hills, Hyderabad - 500034"
+                 android:textColor="@color/c7"/>
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:padding="16dp"
+             android:layout_marginBottom="1dp"
+             android:background="@color/white">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Name of the place"
+                 android:textColor="@color/c5"
+                 android:textSize="16sp"
+                 android:textStyle="bold"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="house no : 2, Road number 12, Banjara Hills, Hyderabad - 500034"
+                 android:textColor="@color/c7"/>
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:padding="16dp"
+             android:layout_marginBottom="1dp"
+             android:background="@color/white">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Name of the place"
+                 android:textColor="@color/c5"
+                 android:textSize="16sp"
+                 android:textStyle="bold"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="house no : 2, Road number 12, Banjara Hills, Hyderabad - 500034"
+                 android:textColor="@color/c7"/>
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:padding="16dp"
+             android:layout_marginBottom="1dp"
+             android:background="@color/white">
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Name of the place"
+                 android:textColor="@color/c5"
+                 android:textSize="16sp"
+                 android:textStyle="bold"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="house no : 2, Road number 12, Banjara Hills, Hyderabad - 500034"
+                 android:textColor="@color/c7"/>
+         </LinearLayout>-->
+
+    </LinearLayout>
 
 
 
